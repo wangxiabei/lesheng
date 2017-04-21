@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   validates :authenticaton_token, presence: true, length: { maximum: 32}
 
   def check
-    p [0..9, 'a'..'z', 'A'..'Z'].map{|item| item.to_a}.flatten.shuffle.take(32).join
+    puts [0..9, 'a'..'z', 'A'..'Z'].map{|item| item.to_a}.flatten.shuffle.take(32).join
   end
+
   
 end
